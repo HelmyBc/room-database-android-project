@@ -17,9 +17,14 @@ public class Word {
     @ColumnInfo(name = "word2")
     private String mWord2;
 
-    public Word(@NotNull String mWord, @NotNull String mWord2) {
+    @NotNull
+    @ColumnInfo(name = "word3")
+    private String mWord3;
+
+    public Word(@NotNull String mWord, @NotNull String mWord2, @NotNull String mWord3) {
         this.mWord = mWord;
         this.mWord2 = mWord2;
+        this.mWord3 = mWord3;
     }
 
     public String getWord() {
@@ -36,5 +41,14 @@ public class Word {
 
     public void setWord2(String mWord2) {
         this.mWord2 = mWord2;
+    }
+
+    @NotNull
+    public String getWord3() {
+        return mWord3;
+    }
+
+    public void setWord3(@NotNull String mWord3) {
+        this.mWord3 = mWord3;
     }
 }

@@ -31,6 +31,8 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
             Word current = mWords.get(position);
             holder.wordItemView.setText(current.getWord());
             holder.wordItemView2.setText(current.getWord2());
+            holder.wordItemView3.setText(current.getWord3());
+
         } else {
             // Covers the case of data not being ready yet.
             holder.wordItemView.setText("No Word");
@@ -55,10 +57,13 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
 
         private final TextView wordItemView2;
 
+        private final TextView wordItemView3;
+
         private WordViewHolder(View itemView) {
             super(itemView);
             wordItemView = itemView.findViewById(R.id.textView);
             wordItemView2 = itemView.findViewById(R.id.textView2);
+            wordItemView3 = itemView.findViewById(R.id.textView3);
 
         }
     }
